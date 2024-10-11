@@ -45,3 +45,16 @@ int main(int argc, char** argv) {
     free(arr);
     return 0;
 }
+
+void bubbleSort(int* arr, int size) {
+    int t;
+    for (int i = 0; i < size - 1; ++i) {
+        for (int j = size - 1; j > i; --j) {
+            if (arr[j] < arr[j - 1]) {
+                t = arr[j];
+                arr[j] = arr[j - 1];
+                arr[j - 1] = t;
+            }
+        }
+    }
+}
